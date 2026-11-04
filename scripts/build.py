@@ -231,7 +231,7 @@ def lint_report(path: Path) -> list:
                 errors.append(f"速览 Markdown 渲染失败: {e}")
 
             feature_body = body[quick_view.end():]
-            trailing_section = re.search(r"^##\s+(?:其他动态|简讯|后续观察)\s*$", feature_body, re.MULTILINE)
+            trailing_section = re.search(r"^##\s+(?:其他动态|简讯|后续观察|信息来源)\s*$", feature_body, re.MULTILINE)
             if trailing_section:
                 feature_body = feature_body[:trailing_section.start()]
             feature_names = [
