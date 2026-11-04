@@ -4,7 +4,8 @@ watch:
   official:
     - { name: OpenAI, url: https://openai.com/news/ }
     - { name: Anthropic, url: https://www.anthropic.com/news }
-    - { name: Gemini, url: https://blog.google/products-and-platforms/products/gemini/ }
+    - { name: Gemini app, url: https://blog.google/products-and-platforms/products/gemini/ }
+    - { name: Google DeepMind, url: https://deepmind.google/blog/ }
     - { name: DeepSeek, url: https://www.deepseek.com/news/ }
     - { name: Qwen models, url: https://huggingface.co/Qwen }
     - { name: GLM models, url: https://huggingface.co/zai-org/models }
@@ -16,8 +17,10 @@ watch:
     - { name: ByteDance Seed, url: https://seed.bytedance.com/en/research }
     - { name: MiniMax, url: https://www.minimax.io/blog }
     - { name: Mistral AI, url: https://mistral.ai/news/ }
+    - { name: Cursor Changelog, url: https://cursor.com/changelog }
 
   discovery:
+    - { name: Hugging Face Blog, url: https://huggingface.co/blog }
     - { name: TechCrunch AI, url: https://techcrunch.com/category/artificial-intelligence/ }
     - { name: Ars Technica AI, url: https://arstechnica.com/ai/ }
     - { name: The Verge AI, url: https://www.theverge.com/ai-artificial-intelligence }
