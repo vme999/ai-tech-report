@@ -38,7 +38,7 @@ CONTENT_DIR = ROOT / "content" / "weekly"
 SITE_DIR = ROOT / "site"
 TEMPLATES_DIR = ROOT / "templates"
 
-# ── lint：只校验文件是否可发布，不编码编辑偏好 ──
+# ── lint：校验发布格式和明确的内容规则 ──
 
 # 模板中未替换即构成「占位残留」的标记。所有待填占位与待删说明统一用「【待填】」，
 # 周编号占位用 YYYY-Www；检测只匹配这些标记，
@@ -210,6 +210,8 @@ def lint_report(path: Path) -> list:
     if not body.strip():
         errors.append("正文为空")
     else:
+        if re.search(r"^##\s+后续观察\s*$", body, re.MULTILINE):
+            errors.append("不得添加‘后续观察’章节")
         quick_view = QUICK_VIEW_RE.search(body)
         if not quick_view:
             errors.append("缺少必备章节 ## 速览")
@@ -231,7 +233,7 @@ def lint_report(path: Path) -> list:
                 errors.append(f"速览 Markdown 渲染失败: {e}")
 
             feature_body = body[quick_view.end():]
-            trailing_section = re.search(r"^##\s+(?:其他动态|简讯|后续观察|信息来源)\s*$", feature_body, re.MULTILINE)
+            trailing_section = re.search(r"^##\s+(?:其他动态|简讯|信息来源)\s*$", feature_body, re.MULTILINE)
             if trailing_section:
                 feature_body = feature_body[:trailing_section.start()]
             feature_names = [
