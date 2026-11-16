@@ -24,4 +24,9 @@ watch:
     - { name: TechCrunch AI, url: https://techcrunch.com/category/artificial-intelligence/ }
     - { name: Ars Technica AI, url: https://arstechnica.com/ai/ }
     - { name: The Verge AI, url: https://www.theverge.com/ai-artificial-intelligence }
+    - { name: Reuters AI, url: https://www.reuters.com/technology/artificial-intelligence/ }
+    - { name: Financial Times AI, url: https://www.ft.com/artificial-intelligence }
+    - { name: The Information, url: https://www.theinformation.com/ }
     - { name: 量子位, url: https://www.qbitai.com/ }
+    - { name: 晚点 LatePost, url: https://www.latepost.com/ }
+    - { name: 第一财经, url: https://www.yicai.com/news/ }
